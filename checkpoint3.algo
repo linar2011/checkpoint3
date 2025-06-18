@@ -1,0 +1,24 @@
+ALGORITHM checkpoint
+VAR
+    ch:STRING;
+    word:INTEGER:=0;
+    voy:INTEGER:=0;
+    length:INTEGER:=0;
+    i:INTEGER:=0;
+    voywels: ARRAY_OF CHAR[6]:={"a","e","i","o","u","y"};
+BEGIN
+    Read(ch)
+    length:=ch.length
+    FOR i FROM 0 TO ch.length-1  DO
+        IF (ch[i]=" "or ch[i]=".") THEN
+            wold:=wold+1
+        END_IF
+        IF (ch[i] in voywels) THEN
+        voy:=voy+1
+        END_IF
+    END_FOR
+    Write("Thez number of characters: ",length)
+    Write("The number of words: ",wold)
+    Write("The number of voywels: ",voy)
+
+END
